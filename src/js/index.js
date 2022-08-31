@@ -246,17 +246,6 @@ function posJogarCarta(){
     }
 }
 
-function atualizarCards() {
-    setTimeout(() => {
- 
-        
-       
-
-        cartaInimigo3.src = layoutDaCarta.imagem
-        cartaInimigo2.src = layoutDaCarta.imagem
-        cartaInimigo1.src = layoutDaCarta.imagem
-    }, 500);
-}
 
 function jogarCarta(indice) {
     cartaJogada[0] = maoPlayer[indice]
