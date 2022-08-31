@@ -1,0 +1,201 @@
+*{
+    margin: 0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+#deck-player{
+    z-index: 6;
+}
+
+.cabecalho{
+    width: 750px;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 15px;
+}
+.cabecalho button{
+    padding: 5px;
+}
+
+.tela {
+    position: relative;
+    width: 750px;
+    height: 500px;
+    display: flex;
+    justify-content: center;
+    border: 2px solid #000;
+    overflow: hidden;
+    background: linear-gradient(rgb(106, 72, 3), #c39602,rgb(106, 72, 3));
+}
+
+.tela img{
+    width: 120px;
+    border-radius: 5px;
+    position: absolute;
+    box-shadow: 0 0 15px 1px #000;
+
+}
+
+.tela .player{
+    bottom: -75px;
+    cursor: pointer;
+    z-index: 2;
+}
+
+.tela .imagem-1{
+    left: 250px;
+    transform: rotate(-15deg);
+}
+
+.tela .imagem-2{
+    left: 320px;
+    bottom:-60px
+}
+
+.tela .imagem-3{
+    left: 400px;
+    transform: rotate(15deg);
+}
+
+.tela .imagem-4.inimigo{
+    left:250px;
+    transform: rotate(195deg);
+}
+
+.tela .imagem-6.inimigo{
+    left:400px;
+    transform: rotate(175deg);
+}
+
+.tela .imagem-5.inimigo{
+    left: 320px;
+    top:-60px
+}
+
+.tela .player:hover{
+    z-index: 4;
+    animation: mostrar-carta 250ms linear forwards;
+}
+
+.tela .inimigo{
+    transform: rotate(180deg);
+    top:-75px
+}
+
+.tela .deck-player, .tela .carta-4{
+    width: 80px;
+    left: 15px;
+    bottom: 15px;
+}
+
+
+.tela .deck-player{
+    z-index: 1;
+    cursor: pointer;
+    
+}
+
+.tela .deck-inimigo{
+    width: 80px;
+    right: 15px;
+    top: 15px;
+    transform: rotate(180deg);
+}
+
+.tela .carta-4{
+    transform: rotateY(180deg);
+    
+}
+
+.carta-comprada{
+    animation: comprar 2s linear  ;
+    
+}
+
+.baralhos{
+    position: absolute;
+    left: 15px;
+    top: 15px;
+}
+
+.info{
+    position: absolute;
+    left: 15px;
+    top: 75px;
+}
+
+.tabuleiro {
+    
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 0;
+}
+
+.tabuleiro .carta-player{
+    position: absolute;
+    bottom: 220px;
+}
+
+.tabuleiro .carta-player .carta{
+    left: -35px;
+}
+
+
+
+.tabuleiro .carta-comp{
+    position: absolute;
+    top: 220px;
+    transform: rotate(180deg);
+}   
+
+.tabuleiro .carta-player img, .tabuleiro .carta-comp img{
+    width: 75px;
+    
+}
+
+.tabuleiro .carta-comp .carta{
+    right: -36px;
+}
+
+.tabuleiro .btn button{
+    padding: 5px;
+    font-weight: bold;
+}
+
+@keyframes mostrar-carta {
+    100%{
+        transform: scale(1.35) translateY(-85px);
+        
+    }
+    
+}
+
+@keyframes comprar {
+    
+    20%{
+        transform: translateX(320px ) translateY(-150px) scale(2) rotateY(360deg);
+        z-index: 2;
+    }
+    75%{
+        transform: translateX(320px ) translateY(-150px) scale(2) rotateY(360deg);
+        z-index: 2;
+    }
+    
+    100%{
+        transform: translateX(320px ) translateY(100px) scale(1.2) rotateY(360deg);
+        z-index: 2;
+    }
+}

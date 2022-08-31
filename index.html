@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+    <header class="cabecalho">
+        <h1>Demons-Slayer</h1>
+        <button id="reset">Reset</button>
+    </header>
+    <div class="tela">
+        <img src="src/image/18.png" alt="" class="deck-inimigo" id="">
+        <img src="src/image/18.png" alt="" class="imagem-4 inimigo" id="carta-inimigo-1">
+        <img src="src/image/18.png" alt="" class="imagem-5 inimigo" id="carta-inimigo-2">
+        <img src="src/image/18.png" alt="" class="imagem-6 inimigo" id="carta-inimigo-3">
+    
+        <img src="src/image/18.png" alt="" class="deck-player" id="deck-player" >
+        <img src="src/image/18.png" alt="" class="deck-player" >
+        <img src="" alt="" class="carta-4">
+        <img src="" alt="" class="imagem-1 player" id="carta-1">
+        <img src="" alt="" class="imagem-2 player" id="carta-2">
+        <img src="" alt="" class="imagem-3 player" id="carta-3">
+       
+       <div class="baralhos">
+        <h2>Player: <span id="player-ui"></span></h2>
+        <h2>Comp: <span id="comp-ui"></span></h2>
+       </div>
+        <div class="info">
+            <h3>Carta: <span id="nome-da-carta-ui"></span></h3>
+            <h3>Ataque: <span id="ataque-da-carta-ui"></span></h3>
+            <h3>Defesa: <span id="defesa-da-carta-ui"></span></h3>
+            <h3 id="resultado-da-rodada"></h3>
+        </div>
+        <div class="tabuleiro">
+            <div class="carta-player">
+               
+                <img src="src/image/18.png" alt="" class="carta" id="carta-player">
+
+            </div>
+            <div class="btn">
+                <button  class="btn-atacar" id="btn-atacar">Atacar</button>
+                <button class="btn-defender" id="btn-defender">Defender</button>
+            </div>
+            <div class="carta-comp">
+               
+                <img src="src/image/18.png" alt="" class="carta" id="carta-comp">
+
+            </div>
+        </div>
+    </div>
+
+    <script src="src/js/index.js"></script>
+</body>
+</html>
